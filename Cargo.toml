@@ -1,0 +1,16 @@
+[package]
+name = "zero_modbus"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = "*"
+serde_yaml = "*"
+serde_json = "*"
+zmq = "*"
+tokio = { version = "*", features = ["full"] }
+tokio-serial = "*"
+tokio-modbus = "*"
+futures = "*"
+log="*"
+simple_logger = "*"

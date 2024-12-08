@@ -1,0 +1,37 @@
+protocol: rtu
+address: /dev/ttyUSB0
+baudrate: 115200
+
+slaves:
+- rtu_slave_1:
+    id: 0
+    co:
+    - status_value_a:
+        addr: 0
+    di:
+    - input_status_a:
+        addr: 1
+    hr:
+    - holding_value_a:
+        addr: 2
+    ir:
+    - rdonly_value_a:
+        addr: 3
+- rtu_slave_2:
+    id: 1
+    co:
+    - status_value_b:
+        addr: 0
+        func: multiple
+    di:
+    - input_status_b:
+        addr: 1
+    hr:
+    - holding_value_b:
+        addr: 2
+        type: i16
+        func: single
+    ir:
+    - rdonly_value_b:
+        addr: 3
+        type: f32
